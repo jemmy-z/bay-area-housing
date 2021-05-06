@@ -120,7 +120,83 @@
         <h2>Finding the typical home value per zip code</h2>
 
         <p>
-            Zillow Research provides the Zillow Home Value Index (ZHVI) for most of the United States. The ZHVI is interpreted as "a smoothed, seasonally adjust measure of the typical home value and market changes across a given region and housing type" (Zillow). I cleaned the dataset to only include the zip code and the ZHVI at the end of quarter four of each year from 2010 to 2019 for the respective zip code.
+            Zillow Research provides the Zillow Home Value Index (ZHVI) for most of the United States. The ZHVI is interpreted as "a smoothed, seasonally adjust measure of the typical home value and market changes across a given region and housing type" (Zillow). I cleaned the dataset to only include the zip code and the ZHVI of the four quarter in each year from 2010 to 2019 for the respective zip code. The fourth quarter was chosen to represent a given year because the HUD dataset was also gathered in the fourth quarter of a given year. Combining the Zillow dataset and the dataset from the previous section gives us one dataset that contains the zip code, year, units built, and typical home value.
         </p>
+        <p>
+            The first ten rows of the table are shown below.
+        </p>
+
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="table-dark">
+              <tr>
+                <th>zip</th>
+                <th>year</th>
+                <th>units_built</th>
+                <th>price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>94002</td>
+                <td>2010</td>
+                <td>3.012672</td>
+                <td>887752.0</td>
+              </tr>
+              <tr>
+                <td>94002</td>
+                <td>2011</td>
+                <td>4.007986</td>
+                <td>877332.0</td>
+              </tr>
+              <tr>
+                <td>94002</td>
+                <td>2012</td>
+                <td>3.152709</td>
+                <td>995829.0</td>
+              </tr>
+              <tr>
+                <td>94002</td>
+                <td>2013</td>
+                <td>3.961284</td>
+                <td>1243884.0</td>
+              </tr>
+              <tr>
+                <td>94002</td>
+                <td>2014</td>
+                <td>3.000000</td>
+                <td>1363204.0</td>
+              </tr>
+              <tr>
+                <td>94002</td>
+                <td>2015</td>
+                <td>6.038729</td>
+                <td>1626940.0</td>
+              </tr>
+              <tr>
+                <td>94002</td>
+                <td>2016</td>
+                <td>3.001647</td>
+                <td>1659871.0</td>
+              </tr>
+              <tr>
+                <td>94005</td>
+                <td>2010</td>
+                <td>4.455830</td>
+                <td>566928.0</td>
+              </tr>
+              <tr>
+                <td>94005</td>
+                <td>2011</td>
+                <td>3.565060</td>
+                <td>520919.0</td>
+              </tr>
+              <tr>
+                <td>94005</td>
+                <td>2012</td>
+                <td>0.926608</td>
+                <td>576325.0</td>
+              </tr>
+            </tbody>
+          </table>
     </div>
 </div>
