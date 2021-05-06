@@ -1,0 +1,15 @@
+#navbar {
+    background-color: rgb(6, 26, 56);
+}
+
+.dropdown-menu {
+    background-color: rgb(6, 26, 56);
+}
+
+.dropdown-item {
+    color: white !important;
+}
+
+.dropdown-item:hover {
+    color: black !important;
+}
