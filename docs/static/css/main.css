@@ -1,0 +1,38 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: 'Raleway', sans-serif; */
+    font-size: larger !important;
+    word-wrap: break-word;
+}
+
+.masthead {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../images/landing.jpg');
+    height: 100vh;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: rgba(150, 150, 150) !important;
+}
+
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.dropdown-item {
+    color: white !important;
+}
+
+.dropdown-item:hover {
+    color: black !important;
+}
