@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    /* font-family: 'Raleway', sans-serif; */
-    font-size: larger !important;
+    font-family: 'Raleway', sans-serif;
+    /* font-size: larger !important; */
     word-wrap: break-word;
+}
+
+h1, h2 {
+    font-weight: bold;
 }
 
 .masthead {
@@ -35,4 +42,51 @@ body {
 
 .dropdown-item:hover {
     color: black !important;
+}
+
+.dropdown-item:active {
+    background-color: rgb(0, 0, 0, 0);
+}
+
+#navbar {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.content {
+    margin: 70px 0 20px 0;
+}
+
+.title {
+    text-align: center;
+    padding: 20px;
+    font-size: 50px;
+}
+
+code {
+    font-family: 'Courier New', monospace;
+    font-size: 18px !important;
+}
+
+pre code {
+    background-color: #eee;
+    border: 1px solid #999;
+    border-radius: 5px;
+    display: block;
+    padding: 20px;
+    word-wrap: normal;
+    white-space: pre;
+    line-height: 1.25em;
+}
+
+/* Code in text */
+p > code,
+li > code,
+dd > code,
+td > code {
+    color: rgb(17, 92, 253);
+    background: #eeeeee;
+    word-wrap: break-word;
+    box-decoration-break: clone;
+    padding: .1rem .3rem .2rem;
+    border-radius: .2rem;
 }

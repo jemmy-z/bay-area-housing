@@ -1,4 +1,7 @@
 function navbar_background() {
+    if (window.location.pathname.split("/").pop() != "index.html") {
+        return;
+    }
     var element = document.getElementById('navbar-button');
     var navbar = document.getElementById('navbar');
     

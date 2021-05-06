@@ -1,0 +1,126 @@
+<div class="content">
+    <div class="container">
+        <h1 class="title">Methods</h1>
+        <hr>
+
+        <h2>Overview</h2>
+
+        <h4>Datasets used:</h4>
+        <ul>
+            <li>Bay Area Total Housing Units</li>
+            <p><em>Source:</em> Professor Karen Chapple</p>
+
+            <li><a href="https://www.zillow.com/research/data/" target="_blank">Zillow Typical Home Values</a></li>
+            <p><em>Source:</em> <i>Zillow Research Data</i>. Zillow.com, https://www.zillow.com/research/data/. Accessed 7 May 2021.</p>
+
+            <li><a href="https://www.huduser.gov/portal/datasets/usps_crosswalk.html" target="_blank">HUD USPS Census Tract to Zip Code</a></li>
+            <p><em>Source:</em> <i>HUD USPS Zip Code Crosswalk Files 2010-2019</i>. HUD USER Office of Policy Development and Research, https://www.huduser.gov/portal/datasets/usps_crosswalk.html. Accessed 7 May 2021.</p>
+        </ul>
+        
+        <h4>Tools used:</h4>
+        <ul>
+            <li>Jupyter Notebook (Python)</li>
+            <li>Pandas Library <em>(Data Processing)</em></li>
+            <li>Matplotlib <em>(Graphs/Plots)</em></li>
+            <li>Seaborn <em>(Graphs/Plots)</em></li>
+        </ul>
+
+        <h4>Works Cited:</h4>
+        <ul>
+            <li></li>
+        </ul>
+
+        <hr>
+
+        <h2>Finding the total housing units built per census tract</h2>
+
+        <p>
+            In order to perform analysis on housing units built in recent years, I needed a table that shows the number of housing units built per zip code in the area. I started with the dataset Professor Karen Chapple provided. This dataset contains three columns: <code>FIPS 13</code>, <code>YearBuilt</code>, <code>TotalUnits</code>. The column <code>FIPS13</code> identifies the location of each data point via the census tract number, <code>YearBuilt</code> indicates the year and <code>TotalUnits</code> indicates the number of housing units built in that year in the <code>FIPS13</code> location.
+        </p>
+
+        <p>
+            Since FIPS13 includes the census block code, I processed the data and converted the column from FIPS13 to FIPS11 by removing the final four digits of each FIPS13 . Then I grouped by the FIPS11 column to find the total number of housing units built per census tract.
+        </p>
+        
+        <h2>Finding the total housing units built per zip code</h2>
+
+        <p>
+            However, Zillow Resarch Data uses zip code as the geographical identifier. Since zip codes are generally larger in area than a census tract, I decided to use zip code as the unit for this project. Thus, we need to convert the FIPS13 column from the total housing unit dataset to zip code. I decided to use the HUD USPS Census Tract to Zip Code dataset to perform the conversion. The dataset only includes the conversion from 2010 to 2019. Thus, I decided to only analyze the data in this past decade.
+        </p>
+        <p>
+            For each census tract, the dataset also provides the percent of residental area the census tract has in the zip code. Since a zip code can consist of many tracts, this percentage can be used to approximate the number of housing units built in a zip code. However, this results in decimals and edge cases like 0.5 housing units built in a zip code. I decided to round the decimal to the nearest integer to approximate the number housing units built per zip code. (The difference between the exact and approximation is less than 0.02%)
+        </p>
+
+        <p>
+            Using the two datasets, I found the total housing units built per year per zip code. The table below shows the first ten rows of the dataset.
+        </p>
+        
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Zip Code</th>
+                    <th>Year</th>
+                    <th>Units Built</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>94002</td>
+                    <td>2010</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>94002</td>
+                    <td>2011</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>94002</td>
+                    <td>2012</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>94002</td>
+                    <td>2013</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>94002</td>
+                    <td>2014</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>94002</td>
+                    <td>2015</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>94002</td>
+                    <td>2016</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>94005</td>
+                    <td>2010</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>94005</td>
+                    <td>2011</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>94005</td>
+                    <td>2012</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>Finding the typical home value per zip code</h2>
+
+        <p>
+            Zillow Research provides the Zillow Home Value Index (ZHVI) for most of the United States. The ZHVI is interpreted as "a smoothed, seasonally adjust measure of the typical home value and market changes across a given region and housing type" (Zillow). I cleaned the dataset to only include the zip code and the ZHVI at the end of quarter four of each year from 2010 to 2019 for the respective zip code.
+        </p>
+    </div>
+</div>
