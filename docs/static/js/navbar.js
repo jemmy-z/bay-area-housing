@@ -1,5 +1,6 @@
 function navbar_background() {
-    if (window.location.pathname.split("/").pop() != "index.html") {
+    var loc = window.location.pathname.split("/").pop();
+    if (loc != "" && loc != "index.html" ) {
         return;
     }
     var element = document.getElementById('navbar-button');

@@ -29,7 +29,8 @@
         <script src="static/js/navbar.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
-                if (window.location.pathname.split("/").pop() != "index.html") {
+                var loc = window.location.pathname.split("/").pop();
+                if (loc != "" && loc != "index.html" ) {
                     return;
                 }
                 var buff_height = 70;
