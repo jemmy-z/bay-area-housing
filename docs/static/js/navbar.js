@@ -12,7 +12,7 @@ function navbar_background() {
     }
 }
 
-$(document).ready((function () {
+$(window).scroll((function () {
     if (window.location.pathname.split("/").pop() != "index.html") {
         return;
     }
