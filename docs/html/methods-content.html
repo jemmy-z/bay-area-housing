@@ -48,7 +48,7 @@
             However, Zillow Resarch Data uses zip code as the geographical identifier. Since zip codes are generally larger in area than a census tract, I decided to use zip code as the unit for this project. Thus, we need to convert the FIPS13 column from the total housing unit dataset to zip code. I decided to use the HUD USPS Census Tract to Zip Code dataset to perform the conversion. The dataset only includes the conversion from 2010 to 2019. Thus, I decided to only analyze the data in this past decade.
         </p>
         <p>
-            For each census tract, the dataset also provides the percent of residental area the census tract has in the zip code. Since a zip code can consist of many tracts, this percentage can be used to approximate the number of housing units built in a zip code. However, this results in decimals and edge cases like 0.5 housing units built in a zip code. I decided to round the decimal to the nearest integer to approximate the number housing units built per zip code. (The difference between the exact and approximation is less than 0.02%)
+            For each census tract, the dataset also provides the percent of residential area the census tract has in the zip code. Since a zip code can consist of many tracts, this percentage can be used to approximate the number of housing units built in a zip code. However, this results in decimals and edge cases like 0.5 housing units built in a zip code. I decided to round the decimal to the nearest integer to approximate the number housing units built per zip code. (The difference between the exact and approximation is less than 0.02%)
         </p>
 
         <p>
