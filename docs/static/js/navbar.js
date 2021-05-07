@@ -17,7 +17,7 @@ $(window).scroll((function () {
         return;
     }
     $(document).scroll(function () {
-        var buff_height = 70;
+        var buff_height = 0;
         var $nav = $(".navbar");
         var $nav_drop = $(".dropdown-menu");
         var $nav_item = $(".dropdown-item")
