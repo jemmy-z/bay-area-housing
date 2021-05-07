@@ -12,7 +12,7 @@ function navbar_background() {
     }
 }
 
-$(function () {
+$(document).ready((function () {
     if (window.location.pathname.split("/").pop() != "index.html") {
         return;
     }
@@ -25,4 +25,4 @@ $(function () {
         $nav_drop.toggleClass('scrolled-dropdown-menu', $(this).scrollTop() > window.innerHeight - buff_height);
         $nav_item.toggleClass('scrolled-dropdown-item', $(this).scrollTop() > window.innerHeight - buff_height);
     });
-});
+}));
