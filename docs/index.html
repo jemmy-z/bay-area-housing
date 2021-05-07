@@ -20,8 +20,6 @@
         <div id="landing-image"></div>
 
         <div id="overview-content"></div>
-
-        <p>Scrolled <span>0</span> times.</p>
         
         <!-- Bootstrap JS -->
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -30,10 +28,10 @@
         <script src="static/js/scripts.js"></script>
         <script src="static/js/navbar.js"></script>
         <script type="text/javascript">
-            var x = 0;
             $(document).ready(function(){
                 $(document).scroll(function(){
-                    $("span").text( x+= 1);
+                    var $nav = $(".navbar");
+                    $nav.toggleClass('scrolled', $(this).scrollTop() > window.innerHeight);
                 });
             });
         </script>
