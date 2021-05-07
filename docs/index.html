@@ -30,16 +30,15 @@
         <script type="text/javascript">
             $(document).ready(function(){
                 var loc = window.location.pathname.split("/").pop();
-                if (loc != "" && loc != "index.html" ) {
-                    return;
-                }
-                var buff_height = 70;
+                if (loc == "" || loc == "index.html") {
+                    var buff_height = 70;
                 var $nav = $(".navbar");
                 var $nav_drop = $(".dropdown-menu");
                 var $nav_item = $(".dropdown-item")
                 $nav.toggleClass('scrolled', $(this).scrollTop() > window.innerHeight - buff_height);
                 $nav_drop.toggleClass('scrolled-dropdown-menu', $(this).scrollTop() > window.innerHeight - buff_height);
                 $nav_item.toggleClass('scrolled-dropdown-item', $(this).scrollTop() > window.innerHeight - buff_height);
+                }
             });
         </script>
     </body>
