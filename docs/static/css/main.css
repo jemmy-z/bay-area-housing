@@ -15,8 +15,12 @@ h1, h2 {
     font-weight: bold;
 }
 
+p {
+    font-size: 20px;
+}
+
 .masthead {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../images/landing.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../../images/landing.jpg');
     height: 100vh;
     min-height: 500px;
     background-size: cover;
@@ -89,4 +93,21 @@ td > code {
     box-decoration-break: clone;
     padding: .1rem .3rem .2rem;
     border-radius: .2rem;
+}
+
+.scrolled {
+    background-color: rgba(6, 26, 56, 0.8) !important;
+    transition: background-color 200ms linear;
+  }
+
+.scrolled-dropdown-menu {
+    background-color: rgb(6, 26, 56) !important;
+}
+
+.scrolled-dropdown-item {
+    color: white !important;
+}
+
+.scrolled-dropdown-item:hover {
+    color: black !important;
 }
