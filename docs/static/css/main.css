@@ -55,11 +55,6 @@ p {
     background-color: transparent;
 }
 
-.title {
-    text-align: center;
-    font-size: 50px;
-}
-
 code {
     font-family: 'Courier New', monospace;
     font-size: 18px !important;
