@@ -8,14 +8,11 @@ html {
 body {
     font-family: 'Raleway', sans-serif;
     word-wrap: break-word;
+    font-size: 20px;
 }
 
 h1, h2 {
     font-weight: bold;
-}
-
-p {
-    font-size: 20px;
 }
 
 .masthead {
@@ -99,4 +96,14 @@ td > code {
 
 .scrolled-dropdown-item:hover {
     color: black !important;
+}
+
+.btn {
+    background-color: rgb(6, 26, 56) !important;
+    color: white !important;
+}
+
+.btn:hover {
+    background-color: rgb(0, 75, 187) !important;
+    color: white !important;
 }

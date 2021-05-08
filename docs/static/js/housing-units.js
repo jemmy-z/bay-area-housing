@@ -1,6 +1,6 @@
 $(document).ready( function() {
     $('#bootstrap-navbar').load("html/navbar.html");
-    $('#home-value').load("html/home-value-content.html");
+    $('#housing-units').load("html/housing-units-content.html");
     $('#footer').load("html/footer.html");
 });
 

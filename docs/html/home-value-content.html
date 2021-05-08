@@ -2,17 +2,128 @@
     <div class="container">
         <h1 class="title">Home Value</h1>
 
+        <hr>
+
+        <p class="text-muted" style="font-size:15px;">
+            *Note: Zillow measures home values using the Zillow Home Value Index (ZHVI), which is "[a] smoothed, seasonally adjusted measure of the typical home value and market changes across a given region and housing type" (<a href="https://www.zillow.com/research/data/#:~:text=Zillow%20Home%20Value%20Index%20(ZHVI,given%20region%20and%20housing%20type." target="_blank">zillow.com</a>). All mentions below of typical home value or average home value refer to the ZHVI.
+        </p>
+
+        <p>
+            To get a better understanding of how the typical home value in the Bay Area has changed over the past decade, let's take a closer look at the typical home values in 2010. In Figure 1, the five highest typical home value counties in the Bay Area are San Francisco County, Santa Clara County, San Mateo county, Marin County, Santa Cruz County. The average typical home value across all counties in the Bay Area was $545,000. Meanwhile, across the entire United States, the typical home value in 2010 was only $174,000. This means that the typical home value in the Bay Area was more than 213% higher than that of the average U.S. home.
+        </p>
+
+        <div class="row justify-content-center my-4">
+            <div class="col-0 col-lg-3"></div>
+            <div class="col-12 col-lg-6">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr class="table-dark">
+                            <th>Bay Area County</th>
+                            <th>Typical Home Value</th>
+                         </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>San Francisco County</td>
+                            <td>$811,000</td>
+                        </tr>
+                        <tr>
+                            <td>Santa Clara County</td>
+                             <td>$785,000</td>
+                        </tr>
+                        <tr>
+                             <td>San Mateo County</td>
+                             <td>$780,000</td>
+                        </tr>
+                        <tr>
+                             <td>Marin County</td>
+                             <td>$744,000</td>
+                        </tr>
+                        <tr>
+                             <td>Santa Cruz County</td>
+                             <td>$595,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <figcaption class="figure-caption">Figure 1: Top 5 highest ZHVI in the Bay Area in 2010 (rounded to the nearest thousand).</figcaption>
+                <figcaption class="figure-caption"><i>Source:</i> Zillow Typical Home Values (Zillow Research Data).</figcaption>
+            </div>
+            <div class="col-0 col-lg-3"></div>
+        </div>
+
+        <div class="row justify-content-center my-4">
+            <div class="col-0 col-lg-3"></div>
+            <div class="col-12 col-lg-6">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr class="table-dark">
+                            <th>Bay Area County</th>
+                            <th>Typical Home Value</th>
+                         </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>San Mateo County</td>
+                            <td>$1,558,000</td>
+                        </tr>
+                        <tr>
+                            <td>San Francisco County</td>
+                            <td>$1,517,000</td>
+                        </tr>
+                        <tr>
+                            <td>Santa Clara County</td>
+                            <td>$1,458,000</td>
+                        </tr>
+                        <tr>
+                            <td>Marin County</td>
+                            <td>$1,310,000</td>
+                        </tr>
+                        <tr>
+                            <td>Santa Cruz County</td>
+                            <td>$970,000</td>
+                        </tr>
+                      </tbody>
+                </table>
+                <figcaption class="figure-caption">Figure 2: Top 5 highest ZHVI in the Bay Area in 2019 (rounded to the nearest thousand).</figcaption>
+                <figcaption class="figure-caption"><i>Source:</i> Zillow Typical Home Values (Zillow Research Data).</figcaption>
+            </div>
+            <div class="col-0 col-lg-3"></div>
+        </div>
+
+        <p>
+            By 2019, the average typical home value in the Bay has risen up to $971,000 (an increase of 78%). On the other hand, the average typical home value in the United states rose to $228,000 (an increase of just 31%). The gap between the typical home value in the Bay versus the rest of the United States has become more than 325%. Meanwhile, San Mateo County has taken over as the most expensive county to find shelter in, as seen in Figure 2. Figure 3 below also shows the steady climb of average typical home value in the Bay Area from 2010 to 2019.
+        </p>
+
+        <p>
+            Bay Area home values have increased much faster than the rest of the United States, further fueling the housing crisis. Many people who move to the Bay have a difficult time finding a home due to the sheer monstrosity of the prices. This could lead to future (and present) issues where people working in the Bay are forced to live further and further away, increasing daily commute time and traffic congestion in the major entry and exit points of highways leading into the Bay Area.
+        </p>
+
         <div class="row">
             <span class="col-12 col-lg-3"></span>
             <div class="col-12 col-lg-6">
                 <figure class="figure">
-                    <img src="./images/home-value/bay_area_housing.png" class="figure-img img-fluid rounded" alt="Table comparing Bay Area average home value from 2010 to 2019.">
-                    <figcaption class="figure-caption">Figure 1: increase in Bay Area typical home value from 2010 to 2019.</figcaption>
+                    <img src="./images/home-value/bay_area_housing.png" class="figure-img img-fluid rounded" alt="Table comparing Bay Area typical home value from 2010 to 2019.">
+                    <figcaption class="figure-caption">Figure 3: Bay Area average typical home value from 2010 to 2019.</figcaption>
                     <figcaption class="figure-caption"><i>Source:</i> Zillow Typical Home Values (Zillow Research Data).</figcaption>
                 </figure>
             </div>
             <span class="col-12 col-lg-3"></span>
         </div>
-        
+
+        <p>
+            However, just looking at the increase does not paint the whole picture. Our goal is to see if building more housing contributes to slowing down the rate at which home values increase. Thus, we must also look at the percent change from year to year in average typical home value. Figure 4 plots the percent change in typical home value from 2010 to 2019. Each point represents the percent change from a give year to its prior year. Performing linear regression on the points results in a line sloping downward. Analysis shows that in the past decade, the rate at which the average typical home value increases declines slightly at 0.4% per year. Perhaps, building more homes does help lower the value of homes in an area.
+        </p>
+
+        <div class="row">
+            <span class="col-12 col-lg-3"></span>
+            <div class="col-12 col-lg-6">
+                <figure class="figure">
+                    <img src="./images/home-value/bay_area_housing_percent_change.png" class="figure-img img-fluid rounded" alt="Table comparing Bay Area typical home value from 2010 to 2019.">
+                    <figcaption class="figure-caption">Figure 4: Bay Area percent change in typical home value from 2010 to 2019.</figcaption>
+                    <figcaption class="figure-caption"><i>Source:</i> Zillow Typical Home Values (Zillow Research Data).</figcaption>
+                </figure>
+            </div>
+            <span class="col-12 col-lg-3"></span>
+        </div>
     </div>
 </div>
